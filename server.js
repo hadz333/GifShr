@@ -7,6 +7,8 @@ const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
 
 const app = express();
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
 const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
@@ -36,4 +38,5 @@ app.use('/comments', commentsRouter)
 app.use('/report', reportRouter)
 app.use('/admin', adminRouter)
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+io.on('connection', () => console.log(`Listening on port ${port}`));
+server.listen(port)
