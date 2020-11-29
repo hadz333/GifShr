@@ -1,0 +1,18 @@
+.form-group {
+  padding-top: 8px;
+}
+
+#usernameInput {
+  margin-top: 16px;
+}
+
+#responseText {
+  padding-top: 10px;
+  font-size: 20px;
+  color: red;
+}
+
+#usernameErrorText, #passwordErrorText {
+  display: none;
+  color: red;
+}

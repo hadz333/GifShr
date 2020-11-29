@@ -1,0 +1,40 @@
+#postUpload {
+  padding-top: 20px;
+  text-align: center;
+}
+
+#postUpload img {
+  max-height: 600px;
+  max-width: 800px;
+}
+
+.newPostButton {
+  width: 60%;
+  margin-top: 0;
+  border-radius: 0 !important;
+  text-align: left;
+}
+
+#choosePostType {
+  position: absolute;
+  z-index: 1;
+  left:0;
+  right:0;
+  margin: auto;
+  margin-top: 38px;
+}
+
+.articleAddSectionButton {
+  width: 145px;
+  height: 70px;
+  margin: 2px;
+}
+
+#articleTweetEmbedButton:hover, #articleInstaEmbedButton:hover {
+  color: black;
+}
+
+.paragraphSection {
+  width: 80%;
+  margin: auto;
+}

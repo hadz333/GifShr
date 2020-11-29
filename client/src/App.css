@@ -1,0 +1,273 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.navigation button {
+  width: 150px;
+}
+
+body {
+  background-color: #fafdff;
+}
+
+#appLogo {
+  margin-left: 20px;
+}
+
+#notLoggedInHeaderButtons {
+  float: right;
+}
+
+#headerLoginButton, #signUpButton {
+  margin-left: 2px;
+  margin-right: 2px;
+  width: 80px;
+}
+
+#loggedInHeaderAppLogo {
+  float: left;
+  margin-left: 20px;
+}
+
+#loggedInHeaderButtons {
+  float: right;
+  margin-right: 20px;
+}
+
+/* Make sure two header sections in logged in + not logged in headers
+  clash gracefully on tiny screens
+*/
+@media (max-width: 500px) {
+
+  #loggedInHeaderAppLogo, #appLogo {
+    margin-left: 10px;
+  }
+
+  #loggedInHeaderButtons, #notLoggedInHeaderButtons  {
+    margin-right: 10px;
+  }
+}
+
+/* Make sure two header sections don't clash on very small screen */
+@media (max-width: 310px) {
+  #loggedInHeaderAppLogo, #appLogo {
+    margin-left: 0px;
+  }
+
+  #loggedInHeaderButtons, #notLoggedInHeaderButtons {
+    margin-right: 0px;
+  }
+}
+
+/* Handle logged in navbar sections getting too far apart */
+@media (min-width: 900px) {
+  #loggedInHeaderAppLogo, #appLogo {
+    margin-left: 10%;
+  }
+
+  #loggedInHeaderButtons, #notLoggedInHeaderButtons {
+    margin-right: 10%;
+  }
+}
+
+/* Handle logged in navbar sections getting too far apart */
+@media (min-width: 1200px) {
+  #loggedInHeaderAppLogo, #appLogo {
+    margin-left: 15%;
+  }
+
+  #loggedInHeaderButtons, #notLoggedInHeaderButtons {
+    margin-right: 15%;
+  }
+}
+
+/* Handle logged in navbar sections getting too far apart */
+@media (min-width: 1600px) {
+  #loggedInHeaderAppLogo, #appLogo {
+    margin-left: 18%;
+  }
+
+  #loggedInHeaderButtons, #notLoggedInHeaderButtons {
+    margin-right: 18%;
+  }
+}
+
+#profilePicInProfileHeader {
+  float: left;
+}
+
+#profileStats {
+  float: right;
+}
+
+#profileHeaderDescription {
+  text-align: center;
+}
+
+.pageContainer {
+  position: relative;
+  min-height: 100vh;
+}
+
+#footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+#footerLogo {
+  margin-left: 2%;
+}
+
+#footerLinkColumn {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+#profileEditor {
+  margin-top: 20px;
+}
+
+#formSubmitButton {
+  width: 80px;
+}
+
+#profilePicture {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+}
+
+.postGridPic {
+  width: 33.33333333333%;
+  height: 25vh;
+  object-fit: cover;
+  border: 1px solid black;
+}
+
+.postGridPic:hover {
+  transform: scale(1.02);
+}
+
+#postGrid {
+  width: 100%;
+  margin: auto;
+  padding-top: 20px;
+}
+
+#profilePicturePreview {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+}
+
+.commentsButton {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #7d7d7d;
+  text-decoration: none;
+  cursor: pointer;
+  width: 140px;
+  height: 60px;
+  outline: none!important;
+  margin: 0;
+  text-align: left;
+}
+
+.commentsCaretDown, .commentsCaretUp {
+  margin-left: 5px;
+}
+
+.commentsSection, .commentsCaretUp {
+  display: none;
+}
+
+.postCommentButton {
+  width: 120px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.comment {
+  margin-bottom: 20px;
+}
+
+.commentActionButton {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  text-decoration: none;
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  outline: none;
+  margin: 0;
+  text-align: left;
+}
+
+#displayRepliesButton {
+  margin-left: 10px;
+  width: 80px;
+}
+
+#displayRepliesButton, #replyToCommentButton, #commentReportButton {
+  color: #7d7d7d;
+}
+
+#replyToCommentButton, #commentReportButton {
+  text-align: center;
+}
+
+.commentReplyForm, .commentReplies {
+  display: none;
+}
+
+#postActions, .comments, #postDetails, #individualPostHeader, .commentsLink {
+  margin-left: 10px;
+}
+
+/* media rules */
+
+@media (min-width: 1200px) {
+  #postGrid {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1550px) {
+  #postGrid {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1800px) {
+  #postGrid {
+    width: 60%;
+  }
+}
+
+#mustBeSignedIn {
+  color: red;
+}

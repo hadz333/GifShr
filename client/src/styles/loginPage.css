@@ -1,0 +1,24 @@
+.form-group {
+  max-width: 300px;
+  margin: auto;
+}
+
+button {
+  width: 300px;
+  margin-top: 10px;
+}
+
+
+@media (min-width: 600px) {
+  .plugParagraph {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .plugParagraph {
+    width: 60%;
+    margin: auto;
+  }
+}

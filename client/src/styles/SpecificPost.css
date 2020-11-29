@@ -1,0 +1,210 @@
+#postScroll img {
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
+}
+
+#postScroll {
+  width: 100%;
+}
+
+#singlePost a {
+  color: black;
+  display: inline-block;
+}
+
+#singlePost a:hover {
+  text-decoration: none;
+}
+
+#singlePost img {
+  margin: auto;
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+.specifiedPostPic, .specifiedPostVideo {
+  border-top: 2px solid #e8e8e8;
+  border-bottom: 2px solid #e8e8e8;
+  background: #f5f5f5;
+}
+
+.specifiedPostPic, #specifiedPostInteractiveSection {
+  margin: auto;
+  text-align: center;
+}
+
+#specifiedPostInteractiveSection {
+  text-align: left;
+  padding-bottom: 40px;
+}
+
+#postLikeIcon, #postShareIcon, #postReportIcon {
+  margin-right: 2px;
+}
+
+.socialMediaShareLink {
+  width: 60px;
+}
+
+.socialMediaShareIcon {
+  width: 50px;
+}
+
+.reportButton {
+  max-width: 100%;
+}
+
+.videoPost {
+  width: 100%;
+}
+
+.specifiedPostVideo {
+  width: 100%;
+}
+
+.videoNsfwPosterPic {
+  margin: auto;
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+@media (max-width: 800px) {
+  #singlePost {
+    max-width: 100%;
+  }
+  #postScroll img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 599px) {
+  #specifiedPostInteractiveSection, #individualPostHeader {
+    font-size: 16px;
+  }
+
+  #individualPostBackArrow {
+    font-size: 24px;
+    margin-left: 5px;
+  }
+
+  .commentActionButton {
+    width: 45px;
+    font-size: 12px;
+  }
+
+  .postActionButton {
+    font-size: 16px;
+    width: 70px;
+  }
+
+  .form-check-input {
+    margin-top: 5px;
+  }
+  .comment {
+    margin-left: -10px;
+  }
+}
+
+@media (max-width: 430px) {
+  #specifiedPostInteractiveSection, #individualPostHeader {
+    font-size: 16px;
+  }
+
+  #individualPostBackArrow {
+    font-size: 24px;
+    margin-left: 5px;
+  }
+
+  .commentActionButton {
+    width: 45px;
+    font-size: 12px;
+  }
+
+  .postReportButton {
+    width: 40px;
+  }
+
+  .form-check-input {
+    margin-top: 5px;
+  }
+  .comment {
+    margin-left: -10px;
+    font-size: 12px;
+  }
+
+  #displayRepliesButton {
+    width: 60px;
+  }
+
+  .postActionButton {
+    font-size: 16px;
+    width: 70px;
+  }
+}
+
+@media (min-width: 600px) {
+  #specifiedPostInteractiveSection, #individualPostHeader {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  #individualPostBackArrow {
+    font-size: 24px;
+    margin-left: 5px;
+  }
+
+  #displayRepliesButton {
+    width: 80px;
+  }
+
+  .commentActionButton {
+    width: 70px;
+  }
+
+  .postReportButton {
+    width: 100px;
+  }
+
+  .form-check-input {
+    margin-top: 8px;
+  }
+
+}
+
+@media (min-width: 801px) {
+  .videoPost {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #specifiedPostInteractiveSection, #individualPostHeader {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  #individualPostBackArrow {
+    font-size: 30px;
+    margin-left: 5px;
+  }
+
+  #displayRepliesButton {
+    width: 90px;
+    margin-left: 25px;
+  }
+
+  .commentActionButton {
+    width: 90px;
+  }
+
+  .form-check-input {
+    margin-top: 10px;
+  }
+
+  .videoPost {
+    width: 60%;
+    margin-left: 20%;
+  }
+}

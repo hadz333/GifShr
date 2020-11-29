@@ -1,0 +1,188 @@
+
+#profileHeader {
+  margin: auto;
+  width: 95%;
+}
+
+/* profile header rules to keep things looking ok */
+
+@media (max-width: 452px) {
+  #profilePicInProfileHeader {
+    float: none;
+    width: 50%;
+    margin: auto;
+  }
+
+  #profileStats {
+    margin-right: 18%;
+  }
+
+  #profileHeaderProfileName {
+    text-align: left;
+  }
+}
+
+@media (max-width: 380px) {
+  #profileHeader {
+    width: 100%;
+  }
+
+  #profileStats {
+    margin-right: 14%;
+  }
+}
+
+@media (max-width: 350px) {
+  #profileHeader {
+    width: 100%;
+  }
+  #profileStats {
+    margin-right: 0;
+    margin-left: 12%;
+  }
+}
+
+@media (max-width: 340px) {
+  #profileHeader {
+    width: 100%;
+  }
+  #profileStats {
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 310px) {
+  #profileHeader {
+    width: 100%;
+  }
+
+  #profileStats {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 290px) {
+  #profileStats {
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 452px) {
+  #profileHeader {
+    width: 100%;
+  }
+}
+
+@media (min-width: 490px) {
+  #profileHeader {
+    width: 92%;
+  }
+}
+
+@media (min-width: 555px) {
+  #profileHeader {
+    width: 85%;
+  }
+}
+
+@media (min-width: 650px) {
+  #profileHeader {
+    width: 70%;
+  }
+}
+
+@media (min-width: 800px) {
+  #profileHeader {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #profileHeader {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1600px) {
+  #profileHeader {
+    width: 30%;
+  }
+}
+
+@media (min-width: 2000px) {
+  #profileHeader {
+    width: 25%;
+  }
+}
+
+@media (min-width: 2400px) {
+  #profileHeader {
+    width: 20%;
+  }
+}
+
+#followersCounter {
+  padding-top: 5px;
+}
+
+#ownProfileOptions button {
+  width: 120px;
+  text-align: center;
+  margin: 5px;
+}
+
+#headerProfileLink {
+  border-radius: 40px;
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+}
+
+#logOutButton {
+  width: 120px;
+}
+
+#settingsCog {
+  color: #919191;
+  width: 30px;
+  height: 30px;
+}
+
+#settingsCog:hover {
+  color: #bdbbb7;
+}
+
+#menuHamburger {
+  width: 40px;
+  height: 40px;
+  padding-top: 15px;
+}
+
+#menuLinks {
+  text-align: center;
+  display: none;
+  width: 80%;
+  margin: auto;
+}
+
+#menuLinks a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+#menuLinks a:hover {
+  background-color: #dbdbdb;
+  color: black;
+}
+
+.abababa:hover {
+  color: black;
+}
+
+#navHeader {
+  width: 90%;
+
+}
