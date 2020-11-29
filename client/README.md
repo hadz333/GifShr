@@ -1,3 +1,8 @@
+Social media app built with MERN stack
+
+Live demo link: 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
