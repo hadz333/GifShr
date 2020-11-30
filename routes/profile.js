@@ -402,7 +402,7 @@ router.post('/requestPasswordReset', async (req, res) => {
 
 })
 
-// GET 404 error if I don't include this. Why?
+// GET 404 error if I don't include this
 router.get('/:query', async (req, res) => {
   res.sendFile(path.join(__dirname, '../', 'client', 'build', 'index.html'))
 })
@@ -469,7 +469,6 @@ router.post('/:username/uploadProfileImage', async (req, res) => {
   await Profile.updateOne(query, update)
     .catch(err => console.error(err))
 
-  console.log('here mababa')
   res.redirect('/profile/' + user)
 });
 
@@ -502,6 +501,10 @@ router.get('/retrieveProfileImage/:user', async (req, res) => {
   const profile = await Profile.findOne({ username: user })
     .catch(err => console.error(err))
   res.send(profile.profileImage)
+})
+
+router.get('/:query/:query', async (req, res) => {
+  res.sendFile(path.join(__dirname, '../', 'client', 'build', 'index.html'))
 })
 
 module.exports = router
