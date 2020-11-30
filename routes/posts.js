@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const Profile = require('../model/profile')
-const Post = require('../model/post')
+const Profile = require('../model/profile.js')
+const Post = require('../model/post.js')
 const fs = require('fs');
 const fetch = require("node-fetch");
 
