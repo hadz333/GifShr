@@ -5,6 +5,7 @@ const Post = require('../model/post')
 const Ban = require('../model/ban')
 const fs = require('fs');
 const nodemailer = require('nodemailer');
+const path = require('path')
 
 // accepted file types: jpg, png, gif
 const ACCEPTED_IMG_TYPES = ['image/jpeg', 'image/png', 'image/gif']
@@ -20,10 +21,6 @@ const RULES = [
   'Inappropriate/sexual content (missing NSFW tag)',
   'Spam, scamming or phishing'
 ]
-
-router.get('/', (req, res) => {
-  res.json({"Hello": "Here"})
-})
 
 // this will create directory for new user which
 // contains their images used for profile
@@ -344,13 +341,13 @@ router.post('/requestRecoveryCode', async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'hhill917@gmail.com',
-        pass: 'statibi123'
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
       }
     });
 
     const mailOptions = {
-      from: 'hhill917@gmail.com',
+      from: process.env.EMAIL_USER,
       to: email,
       subject: 'Your recovery code is ' + recoveryCode,
       text: 'Your GifShr 8-digit recovery code is: ' + recoveryCode
@@ -407,7 +404,7 @@ router.post('/requestPasswordReset', async (req, res) => {
 
 // GET 404 error if I don't include this. Why?
 router.get('/:query', async (req, res) => {
-  res.json({"Hello": "There"})
+  res.sendFile(path.join(__dirname, '../', 'client', 'build', 'index.html'))
 })
 
 // upload new profile image

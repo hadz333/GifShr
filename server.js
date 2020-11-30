@@ -5,15 +5,16 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express');
 const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
+const path = require('path')
 
 const app = express();
 const server = require('http').createServer(app);
-const io = require('socket.io')(server);
 const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
+app.use(express.static(path.join(__dirname, 'client', 'build')))
 
 const indexRouter = require('./routes/index')
 const postsRouter = require('./routes/posts')
@@ -38,5 +39,4 @@ app.use('/comments', commentsRouter)
 app.use('/report', reportRouter)
 app.use('/admin', adminRouter)
 
-io.on('connection', () => console.log(`Listening on port ${port}`));
 server.listen(port)
