@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const Profile = require('../model/profile.js')
-const Post = require('../model/post.js')
-const Comment = require('../model/comment.js')
+const Profile = require('../model/profile')
+const Post = require('../model/post')
+const Comment = require('../model/comment')
 const fs = require('fs');
 
 router.get('/', (req, res) => {
