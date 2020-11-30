@@ -6,8 +6,7 @@
   },
   "scripts": {
     "client": "cd client && npm start",
-    "server": "nodemon server.js",
-    "postinstall": "ng build"
+    "server": "nodemon server.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
