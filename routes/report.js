@@ -1,10 +1,10 @@
 const express = require('express')
 const router = express.Router()
-const Report = require('../model/report')
-const Post = require('../model/post')
-const Comment = require('../model/comment')
-const Profile = require('../model/profile')
-const Ban = require('../model/ban')
+const Report = require('../model/report.js')
+const Post = require('../model/post.js')
+const Comment = require('../model/comment.js')
+const Profile = require('../model/profile.js')
+const Ban = require('../model/ban.js')
 
 router.get('/', (req, res) => {
   res.json({"Hello": "Here"})

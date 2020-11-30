@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Report = require('../model/report')
+const Report = require('../model/report.js')
 
 // list of all admins with admin powers
 const ADMIN_POWERS = ['jeffrey7']
