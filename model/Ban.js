@@ -19,4 +19,4 @@ const banSchema = new mongoose.Schema({
   }]
 })
 
-module.exports = mongoose.model('Ban', banSchema)
+module.exports = mongoose.model('ban', banSchema)
