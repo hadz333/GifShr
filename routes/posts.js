@@ -365,12 +365,6 @@ router.post('/deletePost', async (req, res) => {
     console.log(req.body.post.imageSource + ' was deleted');
   });
 
-
-  // delete from Post collection
-  await Post.deleteOne({ _id: req.body.post._id }, function (err) {
-    if(err) console.error(err);
-  });
-
   // delete post id from profile's posts array
   await Profile.updateOne({ username: req.body.post.profile }, {
     "$pull": {
@@ -379,6 +373,12 @@ router.post('/deletePost', async (req, res) => {
   }, function (err) {
     if(err) console.error(err);
   })
+
+
+  // delete from Post collection
+  await Post.deleteOne({ _id: req.body.post._id }, function (err) {
+    if(err) console.error(err);
+  });
 
   res.send('success')
 })
@@ -457,12 +457,12 @@ router.post('/timelinePosts', async (req, res) => {
 
 // retrieve globally trending posts
 router.get('/globalTimelinePosts', async (req, res) => {
-  // find posts within last 24 hours
+  // find posts within last 24 hours (last 30 days for production example)
   // create a list of 20 posts, sorted by likes
   // in descending order (highest at top)
   const matchingPosts = await
     Post.find(
-      { creationDate: {$gt: new Date(Date.now() - MS_IN_DAY)} })
+      { creationDate: {$gt: new Date(Date.now() - MS_IN_DAY * 30)} })
       .sort({ likeCount: 'descending' })
       .limit(20).exec()
   res.json(matchingPosts)

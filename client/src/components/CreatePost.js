@@ -28,7 +28,9 @@ class CreatePost extends Component {
       const postIsNSFWCheckbox = document.getElementById('postIsNSFW')
       const postIsNotNSFWCheckbox = document.getElementById('postIsNotNSFW')
       if (postIsNSFWCheckbox.checked || postIsNotNSFWCheckbox.checked) {
-        document.getElementById("formSubmitButton").disabled = false
+        // production: this is temporarily disabled forever
+        //document.getElementById("formSubmitButton").disabled = false
+        document.getElementById("formSubmitButton").disabled = true
       } else {
         document.getElementById("formSubmitButton").disabled = true
       }
@@ -373,6 +375,8 @@ class CreatePost extends Component {
               value="postIsNotNSFW"
               onChange={this.nsfwCheckboxAction} /> No <br />
             You can read the guidelines for what classifies as adult/NSFW content <a href="/guidelines#nsfw">here.</a> <br />
+            <span style={{size: '30px', color: 'red'}}>NOTE: Images cannot be posted on this production environment due to storage restrictions on this free server.</span>
+            <br />
             <button
               type="submit"
               className="btn btn-primary"

@@ -107,8 +107,8 @@ router.post('/create', async (req, res) => {
     } else {
       const newProfile = await profile.save()
       // create directory for user's pictures
-      createDir('/client/public/' + req.body.username)
-      createDir('/client/public/' + req.body.username + '/profileImages')
+      createDir('/client/build/' + req.body.username)
+      createDir('/client/build/' + req.body.username + '/profileImages')
       res.send("success, " + newProfile._id)
     }
   } catch(err) {
@@ -121,7 +121,6 @@ router.post('/login', async (req, res) => {
   // username is case insensitive
   const username = await req.body.username.toLowerCase()
   const password = req.body.password
-
 
   try {
     const profile = (username.includes('@')) ? await Profile.findOne({ email: username }).exec() :
@@ -436,7 +435,7 @@ router.post('/:username/uploadProfileImage', async (req, res) => {
       const fileType = profilePicType.split('image/')
 
       // Use the mv() method to place the file somewhere on your server
-      const saveLocation = process.cwd() + '/client/public/'
+      const saveLocation = process.cwd() + '/client/build/'
                             + user
                             + '/profileImages/profile_pic.'
                             + fileType[1]
