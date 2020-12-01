@@ -10,8 +10,7 @@ const postSchema = new mongoose.Schema({
     required: true
   },
   imageSource: {
-    type: String,
-    required: true
+    type: String
   },
   description: {
     type: String
@@ -42,7 +41,7 @@ const postSchema = new mongoose.Schema({
   nsfw: {
     type: Boolean,
     required: true
-  }
+  },
 })
 
 module.exports = mongoose.model('post', postSchema)

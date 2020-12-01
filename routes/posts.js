@@ -72,7 +72,7 @@ router.post('/:username/createImagePost', async (req, res) => {
       }
     }
     // Use the mv() method to place the file somewhere on your server
-    const saveLocation = process.cwd() + '/client/public/'
+    const saveLocation = process.cwd() + '/client/build/'
                           + user
                           + '/' + fileName + '.'
                           + fileType[1]
@@ -360,7 +360,7 @@ router.post('/deletePost', async (req, res) => {
   // find the file with postId name in user's folder
   // destroy this file
 
-  fs.unlink(process.cwd() + '/client/public' + req.body.post.imageSource, (err) => {
+  fs.unlink(process.cwd() + '/client/build' + req.body.post.imageSource, (err) => {
     if (err) console.log('deleted non-image post')
     console.log(req.body.post.imageSource + ' was deleted');
   });
