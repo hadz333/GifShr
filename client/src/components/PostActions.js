@@ -119,7 +119,7 @@ class PostActions extends Component {
   likePost = async () => {
     // make sure user is signed in
     if (!localStorage.getItem('plumUser56010')) {
-      const mustBeSignedIn = document.getElementById("mustBeSignedIn")
+      const mustBeSignedIn = document.getElementById("mustBeSignedIn" + this.state.post._id)
       mustBeSignedIn.style.display = 'inline'
       return
     }
@@ -309,7 +309,7 @@ class PostActions extends Component {
           style={{display: 'none'}}>
           This post has been deleted.
         </div>
-        <div id="mustBeSignedIn" style={{display: 'none'}}>
+        <div id={"mustBeSignedIn" + this.state.post._id} style={{display: 'none'}}>
           <br />
           You must be signed in to perform this action. &nbsp;
           <a href="/login">Sign in here.</a>
