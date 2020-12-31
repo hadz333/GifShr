@@ -457,12 +457,12 @@ router.post('/timelinePosts', async (req, res) => {
 
 // retrieve globally trending posts
 router.get('/globalTimelinePosts', async (req, res) => {
-  // find posts within last 24 hours (last 30 days for production example)
+  // find posts within last 24 hours (last 365 days for production example)
   // create a list of 20 posts, sorted by likes
   // in descending order (highest at top)
   const matchingPosts = await
     Post.find(
-      { creationDate: {$gt: new Date(Date.now() - MS_IN_DAY * 30)} })
+      { creationDate: {$gt: new Date(Date.now() - MS_IN_DAY * 365)} })
       .sort({ likeCount: 'descending' })
       .limit(20).exec()
   res.json(matchingPosts)
